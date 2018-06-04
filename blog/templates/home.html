@@ -4,9 +4,32 @@
 
 {% block content %}
 
-  <div id="app">
-    [[ message ]]
-    And some text
-  </div>
+
+
+{#<ul id="example-2">#}
+{#  <li v-for="(item, index) in items">#}
+{#    [[ parentMessage ]] - [[ index ]] - [[ item.message ]]#}
+{#  </li>#}
+{#</ul>#}
+{#<div id="example-3">#}
+{#  <ul>#}
+{#    <template v-for="item in 10">#}
+{#      <li>[[ item ]]</li>#}
+{#      <li class="divider" role="presentation"></li>#}
+{#    </template>#}
+{#  </ul>#}
+{#</div>#}
+<div id="blog-post-demo">
+  <blog-post
+    v-for="post in posts"
+    v-bind:key="post.id"
+    v-bind:title="post.title"
+    v-bind:body="post.body"
+  ></blog-post>
+</div>
+
+
+
+
 
 {% endblock %}
